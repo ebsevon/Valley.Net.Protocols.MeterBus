@@ -19,6 +19,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
         private const int TIMEOUT_IN_SECONDS = 3;
 
         [TestMethod]
+        [TestCategory("Integration")]
         public async Task Meter_Should_Respond_With_Ack_When_Sending_SND_NKE()
         {
             var resetEvent = new AutoResetEvent(false);

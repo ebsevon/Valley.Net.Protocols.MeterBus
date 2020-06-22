@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Valley.Net.Bindings;
+using Valley.Net.Bindings.Tcp;
 using Valley.Net.Protocols.MeterBus.EN13757_2;
 using Valley.Net.Protocols.MeterBus.EN13757_3;
 

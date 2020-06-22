@@ -20,6 +20,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
         private const int TIMEOUT_IN_SECONDS = 3;
 
         [TestMethod]
+        [TestCategory("Integration")]
         public async Task Meter_Should_Respond_With_Ack_When_Sending_SND_NKE()
         {
             var resetEvent = new AutoResetEvent(false);
@@ -35,6 +36,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public async Task Meter_Should_Respond_When_Pinging_The_Meter()
         {
             var binding = new UdpBinding(new IPEndPoint(IPAddress.Parse(COLLECTOR_IP_ADDRESS), COLLECTOR_PORT), new MeterbusFrameSerializer());
@@ -47,6 +49,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public async Task Meter_Scanner_Should_Find_Meter_When_Meter_Is_Connected_To_Collector()
         {
             var binding = new UdpBinding(new IPEndPoint(IPAddress.Parse(COLLECTOR_IP_ADDRESS), COLLECTOR_PORT), new MeterbusFrameSerializer());
@@ -58,6 +61,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public async Task Meter_Should_Have_The_Address_Changed_When_Meter_Address_Is_Reconfigured()
         {
             var binding = new UdpBinding(new IPEndPoint(IPAddress.Parse(COLLECTOR_IP_ADDRESS), COLLECTOR_PORT), new MeterbusFrameSerializer());
@@ -68,6 +72,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public async Task Meter_Telemetry_Should_Be_Retrieved_When_Querying_The_Collector()
         {
             var binding = new UdpBinding(new IPEndPoint(IPAddress.Parse(COLLECTOR_IP_ADDRESS), COLLECTOR_PORT), new MeterbusFrameSerializer());
@@ -84,6 +89,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
         }
 
         [TestMethod]
+        [TestCategory("Integration")]
         public void Collector_Should_Respond_When_Querying_The_Broadcast_Domain()
         {
             var binding = new UdpBroadcastBinding(30718, new QuerySerializer());
