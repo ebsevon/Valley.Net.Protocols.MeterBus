@@ -97,7 +97,7 @@ namespace Valley.Net.Protocols.MeterBus.Test
             var response = await master.RequestData(0x01, TimeSpan.FromSeconds(TIMEOUT_IN_SECONDS)) as VariableDataPacket;
 
             Assert.IsNotNull(response);
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
             var response2 = await master.RequestData(0x01, TimeSpan.FromSeconds(TIMEOUT_IN_SECONDS)) as VariableDataPacket;
 
             Assert.IsNotNull(response2);

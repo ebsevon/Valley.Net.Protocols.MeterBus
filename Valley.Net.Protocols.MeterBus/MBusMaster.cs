@@ -162,7 +162,7 @@ namespace Valley.Net.Protocols.MeterBus
             try
             {
                 await _binding.ConnectAsync();
-
+                
                 await _binding.SendAsync(new ShortFrame((byte)ControlMask.REQ_UD1, address));
 
                 if (!resetEvent.WaitOne(timeout))

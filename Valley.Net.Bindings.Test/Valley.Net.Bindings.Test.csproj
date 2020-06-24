@@ -9,11 +9,10 @@
   <ItemGroup>
     <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
-    <PackageReference Include="System.IO.Ports" Version="4.6.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Valley.Net.Protocols.MeterBus\Valley.Net.Protocols.MeterBus.csproj" />
+    <ProjectReference Include="..\Valley.Net.Bindings\Valley.Net.Bindings.csproj" />
   </ItemGroup>
 
 </Project>
